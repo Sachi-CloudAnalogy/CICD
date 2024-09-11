@@ -29,12 +29,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    # Step 4: Run the app (test if it runs)
-    - name: Run the Flask app
-      run: |
-        python app.py &
-        sleep 10  # Give it time to start
-        curl http://127.0.0.1:5000/  # Test the output of the home route
+    # Step 4: Run the tests
+    - name: Run tests
+      run: pytest
 
     # Step 5: Set up Docker Buildx
     - name: Set up Docker Buildx
