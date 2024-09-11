@@ -59,7 +59,3 @@ jobs:
     - name: DockerHub image build success
       run: echo "Docker image built and pushed to Docker Hub."
 
-    - name: Deploy application (Optional)
-      run: |
-        docker run -p 5000:5000 sachigaur/cicd:latest  
-        
